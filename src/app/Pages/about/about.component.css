@@ -1,0 +1,23 @@
+#about-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.page-title-area {
+    position: relative;
+    z-index: 1;
+    background-image: url(../../../assets/images/page-title-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+.page-title-content {
+    text-align: center;
+}
+.member-head{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+

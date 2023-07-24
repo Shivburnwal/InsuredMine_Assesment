@@ -1,0 +1,41 @@
+
+<!-- Header start -->
+<header class="container-fluid header_section">
+    <div class="row">
+      <div class="col-md-11 col-12 mx-auto header_bg">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <div class="d-flex bd-highlight">
+              <div class="flex-grow-1">
+                <a [routerLink]="'/'">
+                  <img src="../../../assets/images/logo.png" alt="logo">
+                </a>
+                </div>
+                </div>
+           
+            <div class="flex-row-reverse">
+              <div class="d-flex">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/about">About Us</a>
+                    </li>
+                  </ul>
+                  <button *ngIf="!logedIn" type="button" routerLink="/login" class="btn btn-primary btn-sm login-btn">Log In</button>
+                  <button *ngIf="logedIn" type="button" (click)="logout()" class="btn btn-info btn-sm login-btn">Log Out</button>
+                  <h3 class="username-view"><span class="badge bg-primary">{{userName}}</span></h3>
+
+
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- Header end -->

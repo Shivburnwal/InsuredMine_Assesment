@@ -1,0 +1,81 @@
+<div id="slider-part">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="heading">Hi, we’re XYZ company</h2>
+        <h3 class="sub-heading">We provide a next-generation TV service, available nationwide, with a growing array of
+          traditional and digital channels.
+        </h3>
+        <p>Inspired by Philo T. Farnsworth, the inventor of electronic television, Philo was created to build a better
+          TV experience. The company started in the college market and is available nationwide, offering subscribers
+          dozens of top-rated television channels for a low monthly subscription. In addition to being the first
+          entertainment-focused streaming TV service, Philo offers live TV, unlimited 1-Year DVR, on-demand, and content
+          from top programmers all available on Android devices and Android TV, Fire Tablets and Amazon Fire TV, Apple
+          TV, iOS/iPad, Roku, PC/Mac web browsers, and Chromecast with Android functionality. Philo currently offers 60+
+          channels for just $25/month and allows three separate streams on three different devices with up to 10
+          profiles. Philo features a streamlined interface, intelligent search, and the ability to easily send your
+          favorite shows to friends – right from within the platform. Philo is based in San Francisco, with offices in
+          New York and Cambridge, MA. For more information, philo.com.
+
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="user-part">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+       
+     
+
+        <div class="form-group">
+            <!--<textarea class="form-control" [(ngModel)]="selectedOption"
+            (input)="onNameChange()"
+            class="form-control"
+            rows="3"
+         rows="3"></textarea>-->
+         <input type="text" [(ngModel)]="userInput" (input)="onInputChange($event)" />
+         <ul *ngIf="showUserList">
+           <li class="userList" *ngFor="let user of filteredUsers; index as i" (click)="selectedUser($event,i)">
+             
+             <span *ngIf="user.isSelected==false">
+               {{ user.name }}
+             </span>
+           </li>
+         </ul>
+         
+         <div>
+           
+         
+
+          
+
+        </div>
+        <div>
+          <ul>
+            <li *ngFor="let user of userList; index as i" (click)="removeUser($event,i)">
+              <span *ngIf="user.isSelected==true">
+                {{ user.name }}
+              </span>
+          </li>
+          </ul>
+        </div>
+      
+         <!--<select class="form-control mt-3" [(ngModel)]="selectedOption">
+          <option *ngFor="let users of userList | searchFilter: selectedOption" [value]="users.name">
+            {{ users.name }}
+          </option>
+        </select>-->
+
+      </div>
+      <nav class="navbar navbar-light bg-light">
+        <span class="navbar-text">
+          <span class="badge text-bg-primary">{{ selectedOption }}</span>
+        </span>
+      </nav>
+    </div>
+  </div>
+</div>

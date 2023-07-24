@@ -1,0 +1,26 @@
+#slider-part {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.sub-heading{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+.user-part {
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+.userList span{
+    text-decoration: none;
+    background: #618f8f;
+    color: white;
+    padding: 5px;
+}

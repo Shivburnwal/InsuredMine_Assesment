@@ -1,0 +1,19 @@
+.header_section {
+    background-color: black;
+}
+.nav-link{
+    color: white;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.nav-link:focus, .nav-link:hover {
+    background-color: #e74903;
+}
+.login-btn{
+    margin-left: 20px;
+}
+.username-view {
+    margin-left: 30px;
+    color: white;
+}

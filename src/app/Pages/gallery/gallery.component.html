@@ -1,0 +1,85 @@
+<div class="page-title-area">
+  
+  <div class="container">
+    <div class="page-title-content">
+      <h1 class="text-white">Gallery</h1>
+    </div>
+  </div>
+
+</div>
+
+<div id="gallery-section">
+  <div class="container mt-5">
+    <div class="row" *ngIf="this.logedIn==true;">
+      <div class="col" *ngFor="let image of galleryImages">
+      <div class="card" style="width: 18rem; margin-bottom: 30px;">
+        <img
+        src="{{ image.thumbnailUrl }}"
+        alt="{{ image.caption }}"
+        class="img-thumbnail card-img-top"
+        (click)="openModal(image)"
+        *ngIf="isPrivate==image.isPrivate"
+      >
+        <div class="card-body">
+          <h5 class="card-title">{{ image.caption }}</h5>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="this.logedIn==false;">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/images/g1.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Image title</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/images/g2.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Image title</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/images/g3.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Image title</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/images/g4.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Image title</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+
+<!-- The Bootstrap modal -->
+<div class="modal" id="imageModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="" alt="" class="img-fluid" id="modalImage">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
